@@ -18,18 +18,80 @@
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
-            "atomType": "Text",
-            "name": "Text",
-            "x": 0.2032085561497326,
-            "y": 0.3100303951367781,
-            "uniqueID": 1744733908873,
-            "ioValues": [],
-            "description": "Creates a new text sketch.",
-            "fontFamily": "INCONSOLATA",
-            "selectedFontIndex": 7
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.11688311688311688,
+            "y": 0.3525835866261398,
+            "uniqueID": 1744734037200,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 20
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.23223834988540873,
+            "y": 0.3829787234042553,
+            "uniqueID": 1744734095212,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1744734037200
+                },
+                {
+                    "name": "height",
+                    "ioValue": 20
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.35064935064935066,
+            "y": 0.4772036474164133,
+            "uniqueID": 1744734168210,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1744734095212
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1744734037200,
+            "ap2ID": 1744734095212
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1744734095212,
+            "ap2ID": 1744734168210
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
     "compiledBom": {},
