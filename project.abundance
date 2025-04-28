@@ -56,21 +56,21 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.2184873949579832,
-            "y": 0.6747720364741642,
+            "x": 0.3223834988540871,
+            "y": 0.729483282674772,
             "uniqueID": 1745880962056,
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": 1745880870762
+                    "ioValue": 1745881157050
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 5
+                    "ioValue": 3
                 },
                 {
                     "name": "yDist",
-                    "ioValue": 5
+                    "ioValue": 1
                 },
                 {
                     "name": "zDist",
@@ -82,8 +82,8 @@
         {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.3888464476699771,
-            "y": 0.5440729483282675,
+            "x": 0.4453781512605042,
+            "y": 0.45592705167173253,
             "uniqueID": 1745881046800,
             "ioValues": [
                 {
@@ -91,11 +91,37 @@
                     "ioValue": 1745880900355
                 },
                 {
-                    "name": "Shape 2",
+                    "name": "Shape 4",
                     "ioValue": 1745880962056
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.21466768525592053,
+            "y": 0.6869300911854104,
+            "uniqueID": 1745881157050,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1745880870762
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": -45
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
         }
     ],
     "allConnectors": [
@@ -104,7 +130,7 @@
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1745880870762,
-            "ap2ID": 1745880962056
+            "ap2ID": 1745881157050
         },
         {
             "ap1Name": "geometry",
@@ -115,10 +141,17 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
+            "ap2Name": "Shape 4",
             "ap2Primary": false,
             "ap1ID": 1745880962056,
             "ap2ID": 1745881046800
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1745881157050,
+            "ap2ID": 1745880962056
         }
     ],
     "unitsKey": "Inches",
